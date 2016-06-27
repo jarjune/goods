@@ -1,0 +1,3 @@
+﻿RewriteEngine On
+RewriteRule ^(.*)/(.*)/(.*)\.html$ index.php?manage=$1&controller=$2&method=$3
+RewriteRule ^(.*)/(.*)/(.*)\.html/(.*)=(.*)$ index.php?manage=$1&controller=$2&method=$3&$4=$5

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<table border="1">
+	<tr>
+		<th>商品名称：</th>
+		<th>商品单价：</th>
+		<th>商品总数：</th>
+		<th>商品描述：</th>
+		<th>确定</th>
+	</tr>
+	<form action="" method="post">
+		{foreach from=$goods item=val}
+		<input name='goodsId' type='hidden' value={$val['goodsId']}>
+			<tr>
+			<td><input name='goodsName' type='text' value={$val['goodsName']}></td>
+			<td><input name='goodsPrice' type='text' value={$val['goodsPrice']}></td>
+			<td><input name='goodsQuantity' type='text' value={$val['goodsQuantity']}></td>
+			<td><textarea name='goodsDescribe'>{$val['goodsDescribe']}</textarea></td>
+			<td><input type='submit' value='确定'></td>
+			</tr>
+		{/foreach}
+	</form>
+	{if $message != ''}
+	{$message}
+	{/if}
+</table>
+</body>
+</html>

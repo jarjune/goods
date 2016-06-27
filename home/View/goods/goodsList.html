@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table border="1">
+	<tr>
+		<th>商品名称：</th>
+		<th>商品单价：</th>
+		<th>商品总数：</th>
+		<th>商品描述：</th>
+		<th>修改</th>
+		<th>删除</th>
+	</tr>
+	{foreach from=$goods item=val}
+		<tr>
+		<td>{$val.goodsName}</td>
+		<td>{$val.goodsPrice}</td>
+		<td>{$val.goodsQuantity}</td>
+		<td>{$val.goodsDescribe}</td>
+		<td><a href="updateGoods.html/goodsId={$val.goodsId}">修改</a></td>
+		<td><a href="deleteGoods.html/goodsId={$val.goodsId}">删除</a></td>
+		</tr>
+	{/foreach}
+</table>
+	<a href="addGoods.html">增加商品</a>
+</body>
+</html>

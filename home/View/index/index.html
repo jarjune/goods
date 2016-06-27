@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<META charset="utf-8">
+</head>
+<body>
+{if $username != ''}
+欢迎{$username}登录
+<a href="../user/logout.html">退出</a>
+{else}
+	<SCRIPT type="text/javascript">
+		window.location.href="../user/login.html";
+	</SCRIPT>
+{/if}
+
+<form action="../goods/searchGoods.html" method="post">
+	搜索商品：<input type="text" name="goodsName"><input type="submit" name="search" value="搜索">
+</form>
+</body>
+</html>

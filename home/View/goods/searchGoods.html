@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<table border="1">
+	<tr>
+		<th>商品名称：</th>
+		<th>商品单价：</th>
+		<th>商品总数：</th>
+		<th>商品描述：</th>
+		<th>购买数目：</th>
+		<th>购买</th>
+		<th>加入购物车</th>
+	</tr>
+	{foreach from=$goods item=v}
+		<tr>
+		<td>{$v['goodsName']}</td>
+		<td>{$v['goodsPrice']}</td>
+		<td>{$v['goodsQuantity']}</td>
+		<td>{$v['goodsDescribe']}</td>
+		<td><input name="number" type="text"></td>
+		<td><a href="buyGoods.html?number=2&goods_userId='.$v['goods_userId'].'&goodsId='.$v['goodsId'].'">购买</a></td>
+		<td><a href="addGoodsCar.html?goods_userId='.$v['goods_userId'].'&goodsId='.$v['goodsId'].'">加入购物车</a></td>
+		</tr>
+	{/foreach}
+</table>
+</body>
+</html>
